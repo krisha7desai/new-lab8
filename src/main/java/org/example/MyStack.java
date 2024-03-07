@@ -22,7 +22,16 @@ public class MyStack<E> {
 
     public E peek() {
         if (delegate.isEmpty()) throw new EmptyStackException();
-        return delegate.get(delegate.size()-1);}
+        return delegate.get(delegate.size()-1);
+    }
+
+    public boolean isEmpty() {
+        return delegate.isEmpty();
+    }
+
+    public int size() {
+        return delegate.size();
+    }
 
 
 }
