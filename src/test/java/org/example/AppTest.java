@@ -27,6 +27,22 @@ public class AppTest
 
     }
 
+    public void testIsEmpty() {
+        assertTrue("Stack should be empty initially", stack.isEmpty());
+        stack.push("test");
+        stack.push(1);
+        assertFalse("Stack should not be empty after push", stack.isEmpty());
+    }
+
+    public void testSize() {
+        assertEquals("Initial stack size should be 0", 0, stack.size());
+        stack.push("test");
+        stack.push(1);
+        assertEquals("Stack size should be 1 after pushing one item", 1, stack.size());
+        stack.pop();
+        assertEquals("Stack size should return to 0 after popping the only item", 0, stack.size());
+    }
+
     public AppTest( String testName )
     {
         super( testName );
